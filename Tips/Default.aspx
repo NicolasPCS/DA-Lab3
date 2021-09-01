@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <asp:BulletedList ID="BulletedList1" runat="server" OnClick="BulletedList1_Click" DataSourceID="XmlDataSource1" DataTextField="text" DataValueField="url" DisplayMode="HyperLink" Height="25px" Width="280px">
-    <asp:ListItem Value="http://www.microsoft.com">Microsoft</asp:ListItem>
+    <asp:    Value="http://www.microsoft.com">Microsoft</asp:>
 </asp:BulletedList>
 <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/hyperlinks.xml"></asp:XmlDataSource>
     <br />
