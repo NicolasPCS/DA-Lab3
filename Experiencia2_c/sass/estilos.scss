@@ -5,17 +5,17 @@
     background-color: #ffe;
     border: 1px solid #CCC;
     padding: 10px 0 10px 0;
-}
-
-#contenedorform form label {
-    width: 120px;
-    float: left;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 14px;
-}
-
-.bottonsubmit {
+  
+    form label {
+      width: 120px;
+      float: left;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 14px;
+    }
+  }
+  
+  .bottonsubmit {
     color: #f00;
     background-color: #bbb;
     border: 1px solid #fff;
-}
+  }
