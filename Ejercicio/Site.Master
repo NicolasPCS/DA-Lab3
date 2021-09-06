@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Ejercicio.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Aplicación</title>
+
+    <link rel="StyleSheet" href="css/estilos.css" type="text/css">
+</head>
+<body>
+    <form runat="server">
+
+        <ul>
+            <li><a class="active" OnServerClick="mostrarFromProductos" runat="server">Inicio</a></li>
+            <li><a OnServerClick="mostrarFromProductos" runat="server">Producto</a></li>
+            <li><a OnServerClick="mostrarFromClientes" runat="server">Cliente</a></li>
+            <li><a OnServerClick="mostrarFromProveedores" runat="server">Proveedor</a></li>
+        </ul>        
+        
+        <!-- Productos -->
+        <section id="productos" class="form-register" runat="server">
+            <h4>Formulario de productos</h4>
+            <input class="controls" type="text" name="nombre" id="nombrep" placeholder="Nombre del producto" runat="server" />
+            <asp:DropDownList class="dropdown" ID="tipop" runat="server" AutoPostBack="True" Width="280px" placeholder="Tipo del producto"></asp:DropDownList>
+            <input class="controls" type="text" name="descripcion" id="descripcionp" placeholder="Descripción del producto" runat="server" />
+            <input class="controls" type="text" name="cantidad" id="cantidadp" placeholder="Cantidad de productos" runat="server" />
+            <input class="controls" type="text" name="precio" id="preciop" placeholder="Precio del producto" runat="server" />
+            <input class="buttons" type="submit" value="Registrar" runat="server" OnServerClick="crearProducto"/>
+        </section>
+
+        <br />
+
+        <!-- Clientes -->
+        <section id="clientes" class="form-register" runat="server">
+            <h4>Formulario de clientes</h4>
+            <input class="controls" type="text" name="nombres" id="nombresc" placeholder="Nombres" runat="server" />
+            <input class="controls" type="text" name="apellido" id="apellidoc" placeholder="Apellidos" runat="server" />
+            <input class="controls" type="text" name="telefono" id="telefonoc" placeholder="telefono" runat="server" />
+            <input class="controls" type="email" name="mail" id="mailc" placeholder="Correo electrónico" runat="server" />
+            <input class="buttons" type="submit" value="Registrar" runat="server" OnServerClick="crearClientes"/>
+        </section>
+
+        <br />
+
+        <!-- Proveedor -->
+        <section id="proveedor" class="form-register" runat="server">
+            <h4>Formulario de proveedor</h4>
+            <input class="controls" type="text" name="nombres" id="nombrespr" placeholder="Nombres" runat="server" />
+            <input class="controls" type="text" name="apellido" id="apellidopr" placeholder="Apellidos" runat="server" />
+            <input class="controls" type="text" name="telefono" id="telefonopr" placeholder="Telefono" runat="server" />
+            <asp:DropDownList class="dropdown" ID="nombreEmpresa" runat="server" AutoPostBack="True" Width="280px" placeholder="Nombre de la empresa"></asp:DropDownList>
+            <input class="controls" type="text" name="direccion" id="direccionpr" placeholder="Direccion" runat="server" />
+            <input class="buttons" type="submit" value="Registrar" runat="server" OnServerClick="crearProveedor"/>
+        </section>
+
+        <br />
+
+        <div id ="contenedorRes" runat="server">
+                        
+        </div>
+
+    </form>  
+</body>
+</html>
